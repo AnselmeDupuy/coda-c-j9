@@ -7,7 +7,8 @@
 
 struct s_char
 {
-	int strengh;
+	char * name;
+	int strength;
 	int intelligence;
 	int wisdom;
 	int agility;
@@ -16,6 +17,6 @@ struct s_char
 
 typedef struct s_char character; 
 
-void fill_struct(character *perso);
+//void fill_struct(character * perso);
 
 #endif

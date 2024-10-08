@@ -3,7 +3,7 @@
 void fill_struct(character * perso)
 {
 
-	perso->strengh = 18;
+	perso->strength = 18;
 	perso->intelligence = 14;
 	perso->wisdom = 15;
 	perso->agility = 12;
@@ -13,17 +13,21 @@ void fill_struct(character * perso)
 int main()
 {
 
-	character *perso = malloc(sizeof(*perso));  
+	character *perso = malloc(sizeof(*perso)); 
+	perso->name = malloc(strlen("Gandalf") * sizeof(char));  
+    perso->name = strcpy(perso->name, "Gandalf");  
 
 	fill_struct(perso);
 
-	printf("Force: %d\n",perso->strengh);
+	printf("%s\n", perso->name);
+	printf("Force: %d\n",perso->strength);
 	printf("Intel: %d\n",perso->intelligence);
 	printf("Sagesse: %d\n",perso->wisdom);
 	printf("Agilité: %d\n",perso->agility);
 	printf("Vitalité: %d\n",perso->endurance);
 
 	free(perso);
+	free(perso->name);
 
 	return 0;
 }

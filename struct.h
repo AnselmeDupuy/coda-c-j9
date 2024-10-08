@@ -3,8 +3,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
-struct caracteristique
+struct s_char
 {
 	int strengh;
 	int intelligence;
@@ -13,6 +14,8 @@ struct caracteristique
 	int endurance;
 };
 
-typedef struct caracteristique carac; 
+typedef struct s_char character; 
+
+void fill_struct(character *perso);
 
 #endif

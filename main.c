@@ -1,21 +1,26 @@
 #include "struct.h"
 
+void fill_struct(character * perso)
+{
+
+	perso->strengh = 18;
+	perso->intelligence = 14;
+	perso->wisdom = 15;
+	perso->agility = 12;
+	perso->endurance = 20;
+}
+
 int main()
 {
-	carac stats;
+	character perso;
 
-	stats.strengh = 18;
-	stats.intelligence = 14;
-	stats.wisdom = 15;
-	stats.agility = 12;
-	stats.endurance = 20;
+	fill_struct(&perso);
 
-
-	printf("Force: %d\n",stats.strengh);
-	printf("Intel: %d\n",stats.intelligence);
-	printf("Sagesse: %d\n",stats.wisdom);
-	printf("Agilité: %d\n",stats.agility);
-	printf("Vitalité: %d\n",stats.endurance);
+	printf("Force: %d\n",perso.strengh);
+	printf("Intel: %d\n",perso.intelligence);
+	printf("Sagesse: %d\n",perso.wisdom);
+	printf("Agilité: %d\n",perso.agility);
+	printf("Vitalité: %d\n",perso.endurance);
 
 
 	return 0;

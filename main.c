@@ -12,16 +12,18 @@ void fill_struct(character * perso)
 
 int main()
 {
-	character perso;
 
-	fill_struct(&perso);
+	character *perso = malloc(sizeof(*perso));  
 
-	printf("Force: %d\n",perso.strengh);
-	printf("Intel: %d\n",perso.intelligence);
-	printf("Sagesse: %d\n",perso.wisdom);
-	printf("Agilité: %d\n",perso.agility);
-	printf("Vitalité: %d\n",perso.endurance);
+	fill_struct(perso);
 
+	printf("Force: %d\n",perso->strengh);
+	printf("Intel: %d\n",perso->intelligence);
+	printf("Sagesse: %d\n",perso->wisdom);
+	printf("Agilité: %d\n",perso->agility);
+	printf("Vitalité: %d\n",perso->endurance);
+
+	free(perso);
 
 	return 0;
 }

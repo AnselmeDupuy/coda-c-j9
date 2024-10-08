@@ -1,6 +1,6 @@
 # Makefile
 
-NAME = struct
+NAME = ex3
 
 SRCS = main.c\
 		struct.h
